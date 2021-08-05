@@ -1,0 +1,381 @@
+Getting Started
+1   What is Python
+    Python is popular for six reasons:
+	    Uses fewer lines of code to solve a prob.
+		It can be used for many different tasks
+		High level...no memory management
+		Cross platform... works on windows, mac, linux
+		Hugh community... lots of help when you get stuck
+		Large ecosystem...lots of libraries
+		
+*******************************************************************************
+2   Installing Python
+    I did v3.9.6
+    Use ctrl + z > enter to escape	
+	
+*******************************************************************************
+3   Python Interpreter
+    If you go to cmd and start python the cmd window is now the python interpreter
+    In CS a syntax error is like a grammar error in a human language...some people will not understand what you said
+	A poorly formed expression that doesn't run in python grammar will result in a syntax error
+	
+*******************************************************************************
+4   Code Editors
+    He said we need to install vscode
+
+*******************************************************************************
+5   Your First Python Program
+    After opening a python file vscode said i had to select a python interpreter
+	I took the only choice which seemed to be python itself
+	An expression is code that returns a value
+	He types print followed by().
+    He says in programming we say we are calling the print function.
+	Installed formatter autopep8-1.5.7
+	Launch terminal in vscode with ctrl + `
+	Clear the terminal screen with clear.
+	Run python code in terminal by entering 'python app-name'.
+
+*******************************************************************************
+6   Python Extension
+    Already had python extension
+	Used python extension setting to set pylint as linter
+	
+*******************************************************************************
+7   Linting python code.
+    Switched python language server to jedi (from pylance?).
+	Was prompted to install mypy.
+	Mypy became linter.
+	Switched linter to pylint.
+	
+*******************************************************************************
+8   Formatting Python Code
+    Install led pip from downloads.
+    Successfully installed pip-21.1.3 wheel-0.36.2
+	Used pip to upgrade autopep8.
+	The latest version of autopep8 is called pycodestyle.
+	
+*******************************************************************************
+8   Running python code
+    Installed code runner exyension in vscode.
+	I'm not going to use code runner because it's sohtcut is already used by mt for notepad++.
+	I can run in vscode with ctrl + f5 or i can run it in cmd.
+	
+*******************************************************************************
+9   Python implementations
+    implmentations are other versions  of python written in other languages
+	Apparently if you are a dev working in a language that has a python implementation written in it you can import pyhthon code into your app.
+
+*******************************************************************************
+10  How python code is executed
+    The code is compiled into bytecode and this code is converted by the Python
+        virtual machine into machine code.
+    If you use the java based version of python(jython) it compiles the python 
+        code into java bytecode then to machine code.
+    To be clear you import java code into the jython code (not the jython into the java??) 	
+	
+##############################################################################
+Primitives
+1   Variables
+    A variable is a label for a location in memory where information is stored
+	Python has three primitive types: numbers, strings and booleans
+	Numbers can be integers or floating point (floats').
+	Booleans are Capitalized.
+
+*******************************************************************************
+2   Variable names
+    Use names that are descriptive, as in self documenting code.
+	It is ok to use single letter variables for things where peole a accustomed to seeing a single letter.
+	    Examples are coordinate points in a coordinate system or cell addresses in a matrix.
+	Use all lower case lettersin words and seperate wordds with underscores.
+	Formatting: Uses spaces between everything. Don't count on your formatter.
+
+*******************************************************************************
+3   Strings
+    Strings are surrounded by quotes.
+	Most people use double quotes.
+	Mosh says some people use triple quotes around multi-line strings. Doesn't this conflict with the use of triple quotes for strings?
+	A function is a reuseable piece of code
+	Get the length of a string with "len(string_name)'.
+	Get a letter from a string with it's index (position). If a_string = "python' then a_string[1] is 'y'.
+
+*******************************************************************************
+4   Escape Sequences
+    \ is the 'escape character'
+	\" is an 'escape sequence'
+	Other common python escape sequences include \', \\ and \n
+	
+*******************************************************************************
+5   Formatted Strings
+    We can replace: full = first + " " + last, with full = f"{first}     {last}". The second is a formatted string. 
+	
+*******************************************************************************
+6   String Methods
+    Everything in python is an object.
+	Objects have functions called methods.
+	These methods return a new string, the old sttring remains.
+	He goes over:
+    	.upper,
+		.lower,
+		.title,
+		.strip which removes leading or trailing white space which is useful for cleaning user input
+		.rstrip removes whitespace from right
+		.lstrip removes whitespace from left
+		.find(arg) returns the start index of the arg or -1
+		.replace
+		and
+		print("pro" in course) returns True
+		print("swift" not in course) returns True
+
+*******************************************************************************
+7   Numbers
+    Python has three types of numbers.
+	Integers, floats and complex.
+	This: x += 1 is callled the 'augmented assignment operator'
+
+*******************************************************************************
+8   Working with Numbers
+    He talks about:
+	    round()    which rounds to the nearest integer
+		abs()      which gets the absolute value
+	Python has few built in math functions.  If you need more you need to get the math 'module'. To do this enter 'import math' the beginning of your code.
+	'math' is an object so we use 'math.a_math_method' to access it's methods.
+	math.ceil() rounds.
+	To get the list of math module methods google 'python 3 math module',. It will take you to 'docs.python.org/3/library/math'
+
+*******************************************************************************
+9   Type Conversion
+    Use 'input' to get data from the user.
+	Input returns a string.
+	Open terminal in vscode using ctrl+backspace. WRONG. Dave. Use ctrl+ shift+~
+	The four python type conversion methods are:int(),float(), bool() and str().
+	See my commented code in Mosh>python>hello_world>app.py re: formatted code.
+	The falsy values in python are: "" (an empty string), 0 ( the number zero) and 'None' which represents the absence of a value.
+	In Js there are seven falsy values. They are: "", 0, BigInt 0, false, undefined, null and the number NaN. See:https://medium.com/coding-at-dawn/what-are-falsy-values-in-javascript-ca0faa34feb4.
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Control_Flow
+1   Comparison Operator
+    "bag" > 'apple' because srings are in alphabetical order.
+	'bag' != 'BAG' because ord('b') = 98 but ord('B') = 66. Note:the ascii value of 'A' is 97.
+
+*******************************************************************************
+2   Conditional Statements
+    Make a decision with an if statement.
+	if 'conditional :    //this conditionalis any expression that results in a boolean value
+	   /* code to execute*/
+	   // the python interpreter executes all the indented code after the if statement.
+	Elif follows 'if'. If the if conditional was false but the elif is true the elif code executes.
+	Else folllows all the ifs and elifs. If all there conditionals evaluated to false, the code in the else block executes.
+
+*******************************************************************************
+3   Ternary Operator
+    The ternary operator is a more concise version of the if-ele statement.
+	It's format is: code_to_execute_if_the_conditional_is_true if the_conditional else code_to_execute_if_the_conditinal_is_false
+	You cannot put the ternary operator in the return statement in python. Set the ternary operator equal to a variable and return the var.
+
+*******************************************************************************
+4   Logical Operator
+    The python logical operators are and, or and not.
+	With the and operator if both booleans are true the conditional will return true.
+	With the 'or' operator if at least one is true the conditional willl return true.
+	The 'not' operator will return the opposite of the given boolean.
+	You can group booleans and operators in parentheses
+	
+*******************************************************************************
+5   Short circuit evaluation
+    If a conditional has the and operator the conditional will return false when it reaches the first false because
+    	there is now way the conditional can return true no matter what happens after that point.
+	If a conditional has the 'or' opertor the conditional willl return true after is sees the first true boolean because
+	    it doesn't matter what happens after. There is at least one true.
+
+*******************************************************************************
+6   Chaining comparison operators
+    You can write 'if age >= 18 and age < 65:' as 'if 18 <= age < 65:
+
+*******************************************************************************
+7   Quiz
+    I passed.
+
+*******************************************************************************
+8   For loops
+    The basic for loop in python has this syntax: "for some_counter_name in range(how_many_times):'
+	Range cn also include these values:'range(starting_index, ending_index_isn't_included, increment_by)'
+
+*******************************************************************************
+9  For..else
+   Use the'break' statement to break out of a loop early.
+   You can add an 'else' statement to your for that executes only if the for loop executes completely without early termination.       
+
+*******************************************************************************
+10  Nested Loops
+    He explained how the code executes and the indecies change with nested loops.
+
+*******************************************************************************
+11  Iterables
+    The range function returns an object of type range.
+	Range is an iterable objrct so we can use it in a for loop.
+	Other iterable objects are strings and lists.
+
+*******************************************************************************
+12  While Loops
+    Use a while loop to repeat some code as long as some condition is true.
+	A python shell is a while loop that keeps running until you enter ctrl+d.
+
+*******************************************************************************
+13  Infinite Loops
+    Mosh says you can intentinally create an infinite loop and use some other way of breaking out of it.
+	He suggests a conditional and a break statement.
+	
+******************************************************************************
+14  Exercise<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+##############################################################################
+Functions
+1   Defining Functions
+    The syntax to create a function:
+	    def a_useful_function_name():
+            # This is a line comment in python
+		    """
+			The line above is the beginning of a block comment in python.
+			The line below is the end of a block comment in python.
+			"""
+			# All the indented line after the def statement belong to the new function
+
+
+        According to pep8 there should be two blank lines between the end of
+		    the function code and it's invocation.
+
+******************************************************************************
+2   Arguments
+    A parameter is there ariable you need for your function to working.
+	An argument is the value you give to it when you call the function.
+	A function requires an argument to be sent for each parameter or it will not run.
+
+******************************************************************************
+3   Types of functions
+    There are two types of functions:
+	    functions that perform a task like print().
+		Functions that return a value such as round().
+	Functions that don't return a value return 'None'.
+	Even thou it returns noone it is considered a function that performs a task.
+	Mosh says a function that returns a value which can be saved in a variable
+	    is more useful, 'better', than a function thatsimply performs a task.	
+
+******************************************************************************
+4   Keyword Arguments
+    You can make the code more readable by including the keyword in the argument.
+	    See the code.
+	If you're not using keyword/named agruments you're using positional arguments.
+	If you are using named arguments the position in the arg lsit does not matter.
+	You can mix and match but there must be rules.
+	Using named arguments means you can leave out some agrs esp default ones.
+	https://treyhunner.com/2018/04/keyword-arguments-in-python/
+
+******************************************************************************
+5   Default Arguments
+    If you set a default value for an arg in the function definition then when
+	   you make the function call you don't need to supply that arg unless it
+	   is different from the default.
+
+******************************************************************************
+6   xargs
+    How to pass a variable number of arguments
+    Use a plural name for multiple arguments to show there are more than one.
+	Precede the multiple arguments name with an asterisk.
+	If you print your arguments you get a tuple.
+	A tuple is similar to a list but you cannot modify a tuple and a tuple has
+	    parentheses instead of square brackets.
+	Tuples re iterable.
+
+******************************************************************************
+7   xxargs
+    Use **args to pass multiple key:value pairs.
+	When you print **args you get a dictionary.
+	It looks like '*' might be called the 'iterable unpacking operator'
+	    and '**' is the 'dictionary unpacking operator' if Iunderstand
+		PEP8 correctly.
+		Just call them 'unpacing operator' or even 'asterisk'.
+	Also, someone on SO said they're not really operators but '*' and '**' 
+	    are used elsewhere for some completely different
+		reason (overloading) where they are operators.
+	See: https://www.educba.com/python-operators/ fotr a definition of and
+	    discussion about, operators.
+
+******************************************************************************
+8   Scope
+    If you create a variable inside a function it is a local variable. 6:17:40...6:24:57 7:17 sump pump
+	    It has no life outside the function.
+		The same is true for function parameters.
+	If you create a variable in a file outside of any function it is a 
+	    global variable. These are to be avoided.
+	You can have function parameters and variables with the same names in 
+	    different functions.
+	Use the expression 'global variable_name' to refer to a global variable 
+	    inside a function. EXCEPT DON'T DO IT.
+	Do not modify global variable inside functions.
+
+******************************************************************************
+9   Debugging
+    Create code and discover it needs debugging.
+	Press the debug icon in vscode.
+	Create the launch.json file by clicking the blue text and ignoring the
+	    'add configuration' button.
+	Move the cursor to the line where you want to start debugging and enter
+	    Fn+F9 to add/remove breakpoint.
+	Use Fn+F10 to step to the next line.
+	Use Fn+F11 to step into a function. Use shft+Fn+F11 to step out of a function
+	Wether or not the debugger warns you of undeclared vars in the watch panel
+	    must be a setting Mosh set in his vscode.
+	Stop the debugger with shift+Fn+F5.
+	When you step from one line to the next The variables update as required by
+        the code of the line left.
+
+******************************************************************************
+10  VSCode Tricks for Windows
+    Use ctrl+Home and ctrl+End to move as you'd expect in vscode.
+	Use shft+alt+down_arrow to copt a line downward.
+******************************************************************************
+11  VSCode Tricks for Mac...skipped.
+******************************************************************************
+12  Exercise
+    Implement fizzBuzz...I passed.
+	
+##############################################################################
+Data Structures
+1   Lists
+	A matrix is a two dimensional list. Is a matrix a thing in python?
+	Contained in square brackets.
+	Initialize a list of 100 zeros with [0]*100
+	Concatenate two lists with a '+' sign.
+	Items in a list can be different types.
+	'list(range(1, 10, 2))' will produce '[1, 3, 5, 7, 9]'.
+	'print(list("hello world"))' will 
+	    produce '['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']'.
+
+******************************************************************************
+2   Accessing List Items
+    Print the nth item in a list with 'print(list_name{n - 1])
+	Change the nth item in a list with list_name[n - 1] = item_value;
+    	(item_value needs quotes if it's a string).
+	Slice a list the same way you slice a string.
+	    list_name[0: 3] will return '[first_list_item, second_list_item]'.
+		Quotes aren't included; square brackets are.
+		You can also include a step size. Step size can be negative.
+		Step size of -1 will return the list in reverse order.
+		The syntax is list_name[first_included_element, first_not_included_element, step-size].
+		Like string you can leave out any indices.
+
+******************************************************************************
+3   Unpacking Lists
+    To get a single item value from a list we would do:
+	    variable_name = list_name[item_index]
+	To unpack a list we do:
+	    first_var, second_var, third_var,...,last_var = list_name.
+		There must be as many vars as there are items in the list or we get
+    		this error: 'ValueError: too many values to unpack'.
+	If we only want some of the listwe could give variable names for the first
+        few items then pack the rest of the list into a new sub-list:
+        'first, second, *sub_list = original_list' gives:
+		first is original_list[0],
+		second is original_list[1] and
+		sub_list is '[[original_list[2],original_list[3],...,original_list[-1]]'
+		see the example code (C:\Users\Dave\Desktop\Mosh\python\5 - Data Structures\examples...) for more.
+	
